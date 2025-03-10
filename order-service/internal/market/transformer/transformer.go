@@ -5,7 +5,7 @@ import (
 	"github.com/jonathancsr/invest-platform/go/internal/market/entity"
 )
 
-func TransformerInput(input dto.TradeInput) *entity.Order {
+func TransformInput(input dto.TradeInput) *entity.Order {
 	asset := entity.NewAsset(input.AssetID, input.AssetID, 1000)
 	investor := entity.NewInvestor(input.InvestorID)
 	order := entity.NewOrder(input.OrderId, investor, asset, input.Shares, input.Price, input.OrderType)
